@@ -45,7 +45,7 @@ public class GetBreedConotrollerTests {
         Mockito.when(serviceGetBreed.getImagesBreed("url")).thenReturn(null);
         ResultBreed httpResponse = controller.getBreed("dog");
 
-        Assert.assertEquals(httpResponse.getBreed(), "dog");
+        Assert.assertEquals(httpResponse.getBreed(), "dogs");
         Assert.assertEquals(httpResponse.getImages(), images);
         Assert.assertEquals(httpResponse.getSubBreeds(), subBreeds);
     }

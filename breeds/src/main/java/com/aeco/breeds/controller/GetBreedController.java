@@ -30,7 +30,7 @@ public class GetBreedController {
 	
 	@SuppressWarnings("finally")
 	@RequestMapping(value = "/getBreed", method= RequestMethod.GET)
-	public ResultBreed getUrls( @RequestParam(value = "breed", required = true) String breed){
+	public ResultBreed getBreed( @RequestParam(value = "breed", required = true) String breed){
 		
 		serviceGetBreed = new GetBreedServices();
 		ResultBreed result = new ResultBreed();

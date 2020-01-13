@@ -26,7 +26,7 @@ public class GetBreedConotrollerTests {
 	@Test
 	 public void testBreeds() {
 		ResultBreed result = new ResultBreed();
-		Assert.assertEquals(result, controller.getBreed("dog"));
+		Assert.assertEquals(result, controller.getBreed("dogs"));
 	 }
 	
 	@Before
@@ -43,7 +43,7 @@ public class GetBreedConotrollerTests {
     	
         Mockito.when(serviceGetBreed.getAllBreeds("url")).thenReturn(null);
         Mockito.when(serviceGetBreed.getImagesBreed("url")).thenReturn(null);
-        ResultBreed httpResponse = controller.getBreed("dog");
+        ResultBreed httpResponse = controller.getBreed("dogs");
 
         Assert.assertEquals(httpResponse.getBreed(), "dogs");
         Assert.assertEquals(httpResponse.getImages(), images);
